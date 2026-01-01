@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MAS Detroit Cub Scout Pack #2023 - A faith-based outdoor adventure program helping young Muslims grow, explore, and lead while living out Islamic values.">
+  <meta property="og:title" content="MAS Detroit Cub Scout Pack #2023">
+  <meta property="og:description" content="A faith-based outdoor adventure program helping young Muslims grow, explore, and lead while living out Islamic values.">
+  <meta property="og:type" content="website">
+  <title>MAS Detroit Cub Scout Pack #2023</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <header class="nav">
+    <div class="container nav-container">
+      <a href="https://www.masdetroit.org/" class="nav-logo">
+        <img src="https://www.masdetroit.org/wp-content/uploads/2022/02/MAS-DETROIT-10.png.webp" alt="MAS Detroit" data-testid="img-mas-detroit-logo">
+      </a>
+
+      <div class="nav-social" id="nav-social">
+        <a href="https://twitter.com/masdetroit" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #000" data-testid="social-x">X</a>
+        <a href="https://facebook.com/masdetroit" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #1877f2" data-testid="social-facebook">f</a>
+        <a href="https://instagram.com/masdetroit" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #e4405f" data-testid="social-instagram">ig</a>
+        <a href="https://youtube.com/masdetroit" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #ff0000" data-testid="social-youtube">yt</a>
+        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #25d366" data-testid="social-whatsapp">wa</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="https://www.masdetroit.org/donate/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="border-radius: 9999px" data-testid="button-donate">Donate Now</a>
+        <button class="btn btn-ghost btn-icon mobile-menu-btn" id="mobile-menu-btn" data-testid="button-mobile-menu">
+          <span id="menu-icon">&#9776;</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-links" id="desktop-nav">
+      <a href="https://www.masdetroit.org/" target="_blank" rel="noopener noreferrer" class="nav-link" data-testid="nav-link-home">Home</a>
+      <a href="https://www.masdetroit.org/center/" target="_blank" rel="noopener noreferrer" class="nav-link" data-testid="nav-link-mtc">MTC</a>
+      <a href="https://www.masdetroit.org/programs/" target="_blank" rel="noopener noreferrer" class="nav-link" data-testid="nav-link-programs">Programs</a>
+      <a href="https://www.masdetroit.org/events/" target="_blank" rel="noopener noreferrer" class="nav-link" data-testid="nav-link-events">Events</a>
+      <a href="https://www.masdetroit.org/members-land/" target="_blank" rel="noopener noreferrer" class="nav-link" data-testid="nav-link-members-land">Members-Land</a>
+      <a href="https://www.masdetroit.org/gallery/" target="_blank" rel="noopener noreferrer" class="nav-link" data-testid="nav-link-gallery">Gallery</a>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="https://www.masdetroit.org/" target="_blank" rel="noopener noreferrer" class="nav-link" data-testid="nav-mobile-link-home">Home</a>
+      <a href="https://www.masdetroit.org/center/" target="_blank" rel="noopener noreferrer" class="nav-link" data-testid="nav-mobile-link-mtc">MTC</a>
+      <a href="https://www.masdetroit.org/programs/" target="_blank" rel="noopener noreferrer" class="nav-link" data-testid="nav-mobile-link-programs">Programs</a>
+      <a href="https://www.masdetroit.org/events/" target="_blank" rel="noopener noreferrer" class="nav-link" data-testid="nav-mobile-link-events">Events</a>
+      <a href="https://www.masdetroit.org/members-land/" target="_blank" rel="noopener noreferrer" class="nav-link" data-testid="nav-mobile-link-members-land">Members-Land</a>
+      <a href="https://www.masdetroit.org/gallery/" target="_blank" rel="noopener noreferrer" class="nav-link" data-testid="nav-mobile-link-gallery">Gallery</a>
+      <div class="flex items-center justify-center gap-3 mt-4" style="padding-top: 1rem; border-top: 1px solid var(--border);">
+        <a href="https://twitter.com/masdetroit" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #000">X</a>
+        <a href="https://facebook.com/masdetroit" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #1877f2">f</a>
+        <a href="https://instagram.com/masdetroit" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #e4405f">ig</a>
+        <a href="https://youtube.com/masdetroit" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #ff0000">yt</a>
+        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #25d366">wa</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>MAS Detroit<br><span>Cub Scout Pack #2023</span></h1>
+      <p class="hero-description">A faith-based outdoor adventure program helping young Muslims grow, explore, and lead while living out Islamic values</p>
+      <div class="hero-buttons">
+        <a href="https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-780paa2023" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-lg" data-testid="button-register-hero">
+          Register Now Online
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#gallery" class="btn btn-hero-outline btn-lg" data-testid="button-learn-more">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PHOTO GALLERY
+       ============================================ -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="gallery-container">
+        <div class="card">
+          <div class="gallery-main">
+            <img id="gallery-image" src="assets/scout-photo-1.jpg" alt="Pack 2023 Scouts at an event" data-testid="gallery-main-image">
+            <div class="gallery-caption">
+              <p id="gallery-caption-text">Pack 2023 Adventures</p>
+              <span id="gallery-counter">1 of 3</span>
+            </div>
+            <button class="gallery-nav prev" id="gallery-prev" data-testid="button-prev-image">&#10094;</button>
+            <button class="gallery-nav next" id="gallery-next" data-testid="button-next-image">&#10095;</button>
+          </div>
+          <div class="gallery-thumbnails">
+            <button class="gallery-thumb active" data-index="0" data-testid="gallery-thumbnail-1">
+              <img src="assets/scout-photo-1.jpg" alt="Thumbnail 1">
+            </button>
+            <button class="gallery-thumb" data-index="1" data-testid="gallery-thumbnail-2">
+              <img src="assets/scout-photo-2.jpg" alt="Thumbnail 2">
+            </button>
+            <button class="gallery-thumb" data-index="2" data-testid="gallery-thumbnail-3">
+              <img src="assets/scout-photo-3.jpg" alt="Thumbnail 3">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VIDEO SECTION
+       ============================================ -->
+  <section id="videos" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Scout Adventures in Action</h2>
+        <p>Watch videos from our scouting activities and learn about the Cub Scout experience</p>
+      </div>
+
+      <div class="video-container">
+        <div class="card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/n1yjGQ9JKa0" title="Scout Adventure Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-testid="video-main-embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SCOUT LAW SECTION
+       ============================================ -->
+  <section id="scout-law" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Living the Scout Law with Islamic Values</h2>
+        <p>A Scout is <em>Trustworthy, Loyal, Helpful, Friendly, Courteous, Kind, Obedient, Cheerful, Thrifty, Brave, Clean, and Reverent</em>. Each of these values aligns beautifully with Islamic principles.</p>
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/" target="_blank" rel="noopener noreferrer" class="btn btn-outline mt-4" data-testid="button-cultivating-character">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Explore Cultivating Character Book Resources
+        </a>
+      </div>
+
+      <div class="scout-law-grid">
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/#trustworthy" target="_blank" rel="noopener noreferrer" class="scout-law-card" data-testid="card-scout-law-trustworthy">
+          <div class="scout-law-image">
+            <img src="https://www.muslimamericansociety.org/wp-content/uploads/2022/10/trustworthy-01.png" alt="Trustworthy" loading="lazy">
+          </div>
+          <span class="scout-law-name">Trustworthy</span>
+        </a>
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/#loyal" target="_blank" rel="noopener noreferrer" class="scout-law-card" data-testid="card-scout-law-loyal">
+          <div class="scout-law-image">
+            <img src="https://www.muslimamericansociety.org/wp-content/uploads/2022/10/loyal-01.png" alt="Loyal" loading="lazy">
+          </div>
+          <span class="scout-law-name">Loyal</span>
+        </a>
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/#helpful" target="_blank" rel="noopener noreferrer" class="scout-law-card" data-testid="card-scout-law-helpful">
+          <div class="scout-law-image">
+            <img src="https://www.muslimamericansociety.org/wp-content/uploads/2022/10/helpful-01.png" alt="Helpful" loading="lazy">
+          </div>
+          <span class="scout-law-name">Helpful</span>
+        </a>
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/#friendly" target="_blank" rel="noopener noreferrer" class="scout-law-card" data-testid="card-scout-law-friendly">
+          <div class="scout-law-image">
+            <img src="https://www.muslimamericansociety.org/wp-content/uploads/2022/10/friendly-01.png" alt="Friendly" loading="lazy">
+          </div>
+          <span class="scout-law-name">Friendly</span>
+        </a>
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/#courteous" target="_blank" rel="noopener noreferrer" class="scout-law-card" data-testid="card-scout-law-courteous">
+          <div class="scout-law-image">
+            <img src="https://www.muslimamericansociety.org/wp-content/uploads/2022/10/courteous-01.png" alt="Courteous" loading="lazy">
+          </div>
+          <span class="scout-law-name">Courteous</span>
+        </a>
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/#kind" target="_blank" rel="noopener noreferrer" class="scout-law-card" data-testid="card-scout-law-kind">
+          <div class="scout-law-image">
+            <img src="https://www.muslimamericansociety.org/wp-content/uploads/2022/10/kind-01.png" alt="Kind" loading="lazy">
+          </div>
+          <span class="scout-law-name">Kind</span>
+        </a>
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/#obedient" target="_blank" rel="noopener noreferrer" class="scout-law-card" data-testid="card-scout-law-obedient">
+          <div class="scout-law-image">
+            <img src="https://www.muslimamericansociety.org/wp-content/uploads/2022/10/obedient-01.png" alt="Obedient" loading="lazy">
+          </div>
+          <span class="scout-law-name">Obedient</span>
+        </a>
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/#cheerful" target="_blank" rel="noopener noreferrer" class="scout-law-card" data-testid="card-scout-law-cheerful">
+          <div class="scout-law-image">
+            <img src="https://www.muslimamericansociety.org/wp-content/uploads/2022/10/cheerful-01.png" alt="Cheerful" loading="lazy">
+          </div>
+          <span class="scout-law-name">Cheerful</span>
+        </a>
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/#thrifty" target="_blank" rel="noopener noreferrer" class="scout-law-card" data-testid="card-scout-law-thrifty">
+          <div class="scout-law-image">
+            <img src="https://www.muslimamericansociety.org/wp-content/uploads/2022/10/thrifty-01.png" alt="Thrifty" loading="lazy">
+          </div>
+          <span class="scout-law-name">Thrifty</span>
+        </a>
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/#brave" target="_blank" rel="noopener noreferrer" class="scout-law-card" data-testid="card-scout-law-brave">
+          <div class="scout-law-image">
+            <img src="https://www.muslimamericansociety.org/wp-content/uploads/2022/10/brave-01.png" alt="Brave" loading="lazy">
+          </div>
+          <span class="scout-law-name">Brave</span>
+        </a>
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/#clean" target="_blank" rel="noopener noreferrer" class="scout-law-card" data-testid="card-scout-law-clean">
+          <div class="scout-law-image">
+            <img src="https://www.muslimamericansociety.org/wp-content/uploads/2022/10/clean-01.png" alt="Clean" loading="lazy">
+          </div>
+          <span class="scout-law-name">Clean</span>
+        </a>
+        <a href="https://muslimamericansociety.org/cultivating-character-book-resources/#reverent" target="_blank" rel="noopener noreferrer" class="scout-law-card" data-testid="card-scout-law-reverent">
+          <div class="scout-law-image">
+            <img src="https://www.muslimamericansociety.org/wp-content/uploads/2022/10/reverent-01.png" alt="Reverent" loading="lazy">
+          </div>
+          <span class="scout-law-name">Reverent</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       HOW TO JOIN
+       ============================================ -->
+  <section id="join" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>How to Join</h2>
+        <p>Ready to start your scouting adventure? Follow these simple steps to join Pack #2023</p>
+      </div>
+
+      <div class="join-steps">
+        <div class="card join-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Register Online</h4>
+            <p>Complete registration through the Scouting America portal</p>
+            <a href="https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-780paa2023" target="_blank" rel="noopener noreferrer" class="step-link" data-testid="button-step-1-link">
+              Register Online
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="card join-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Begin the Adventure</h4>
+            <p>Attend your first meeting and start the scouting journey!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card fees-card">
+        <div class="fees-card-content">
+          <div class="fees-icon">$</div>
+          <div class="step-content">
+            <h4>Membership Fees</h4>
+            <p>For current fee information and registration assistance options</p>
+            <a href="https://michiganscouting.org/membership-registration/" target="_blank" rel="noopener noreferrer" class="step-link" data-testid="button-fees-link">
+              View Fee Details
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-780paa2023" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" data-testid="button-register-join">
+          Register Now Online
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       RESOURCES SECTION
+       ============================================ -->
+  <section id="resources" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Forms & Resources</h2>
+        <p>Download forms, access training materials, and find everything you need for your scouting journey</p>
+      </div>
+
+      <div class="resources-grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="resource-category-header">
+              <div class="resource-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <div>
+                <h3>Registration Forms</h3>
+                <p class="text-muted">Official registration forms for scouts and volunteers</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-content resource-list">
+            <a href="https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-780paa2023" target="_blank" rel="noopener noreferrer" class="resource-item" data-testid="resource-registration-forms-0">
+              <span>Youth Registration Form</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="resource-category-header">
+              <div class="resource-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+              <div>
+                <h3>Handbooks & Training</h3>
+                <p class="text-muted">Resources for scouts and leaders to learn and grow</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-content resource-list">
+            <a href="https://muslimamericansociety.org/cultivating-character-book-resources/" target="_blank" rel="noopener noreferrer" class="resource-item" data-testid="resource-handbooks-training-0">
+              <span>Cultivating Character Book</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://www.scouting.org/training/youth-protection/" target="_blank" rel="noopener noreferrer" class="resource-item" data-testid="resource-handbooks-training-1">
+              <span>Youth Protection Training</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="resource-category-header">
+              <div class="resource-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h3>Parent Resources</h3>
+                <p class="text-muted">Information for families participating in Cub Scouts</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-content resource-list">
+            <a href="https://www.scouting.org/programs/cub-scouts/" target="_blank" rel="noopener noreferrer" class="resource-item" data-testid="resource-parent-resources-0">
+              <span>Parent Guide</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://www.scouting.org/get-involved/volunteer/" target="_blank" rel="noopener noreferrer" class="resource-item" data-testid="resource-parent-resources-1">
+              <span>Volunteer Opportunities</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="additional-resources">
+        <h3 class="text-center mb-6" style="width: 100%">Additional Resources</h3>
+        <a href="https://beascout.scouting.org/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-testid="button-beascout">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          BeAScout.org
+        </a>
+        <a href="https://michiganscouting.org/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-testid="button-michigan-council">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Michigan Crossroads Council
+        </a>
+        <a href="https://www.scouting.org/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-testid="button-scouting-america">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Scouting America
+        </a>
+        <a href="https://www.scoutshop.org/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-testid="button-scout-shop-resources">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Scout Shop
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CALENDAR SECTION
+       ============================================ -->
+  <section id="events" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Upcoming Events</h2>
+        <p>Stay up to date with our pack meetings, outings, and special events</p>
+      </div>
+
+      <div style="max-width: 56rem; margin: 0 auto;">
+        <div class="card">
+          <div class="card-header" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="resource-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3>Pack #2023 Calendar</h3>
+          </div>
+          <div class="card-content">
+            <div class="calendar-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <p class="mb-4">Calendar integration coming soon</p>
+              <p class="text-muted" style="font-size: 0.875rem; max-width: 24rem;">Our pack calendar will be embedded here. For now, please contact our leadership team for upcoming event details.</p>
+            </div>
+            <div class="text-center">
+              <a href="mailto:scouts@masdetroit.org?subject=Pack Calendar Inquiry" class="btn btn-outline" data-testid="button-calendar-inquiry">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Request Calendar Access
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CHARTER SECTION
+       ============================================ -->
+  <section id="charter" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Official Charter</h2>
+        <p>MAS Detroit Cub Scout Pack #2023 is officially chartered by Scouting America under the Muslim American Society of Detroit</p>
+      </div>
+
+      <div class="card charter-card">
+        <div class="charter-header">
+          <div class="charter-icons">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <h3>Pack #2023 Official Charter</h3>
+          <p class="text-muted">Muslim American Society of Detroit</p>
+        </div>
+        <div class="charter-details">
+          <div class="charter-grid">
+            <div class="charter-item">
+              <span>Charter Date</span>
+              <strong>April 30, 2025</strong>
+            </div>
+            <div class="charter-item">
+              <span>Unit Type and Number</span>
+              <strong>Pack 2023 B</strong>
+            </div>
+            <div class="charter-item">
+              <span>Location</span>
+              <strong>Livonia, MI</strong>
+            </div>
+            <div class="charter-item">
+              <span>Council/District</span>
+              <strong>Michigan Crossroads Council #780, District #34</strong>
+            </div>
+          </div>
+          <div class="charter-badges">
+            <span class="badge-secondary">Scouting America</span>
+            <span class="badge-secondary">Muslim American Society</span>
+          </div>
+          <div class="text-center">
+            <a href="https://www.masdetroit.org/wp-content/uploads/2025/06/MASD-Scout-Cert.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-testid="button-download-charter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Charter Certificate (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT SECTION
+       ============================================ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact Our Leadership Team</h2>
+        <p>Have questions about joining Pack #2023? Reach out to us!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="card">
+            <div class="card-header">
+              <h3>Leadership Team</h3>
+            </div>
+            <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="leader-item">
+                <div class="leader-avatar">MA</div>
+                <div>
+                  <p style="font-weight: 600;">Mohammad Ateya</p>
+                  <p class="text-muted" style="font-size: 0.875rem;">Scouting Committee Chair</p>
+                </div>
+              </div>
+              <div class="leader-item">
+                <div class="leader-avatar">ME</div>
+                <div>
+                  <p style="font-weight: 600;">Mohamed Elzohiery</p>
+                  <p class="text-muted" style="font-size: 0.875rem;">Scoutmaster</p>
+                </div>
+              </div>
+              <div class="leader-item">
+                <div class="leader-avatar">TS</div>
+                <div>
+                  <p style="font-weight: 600;">Taysseer Sharaf</p>
+                  <p class="text-muted" style="font-size: 0.875rem;">Den Leader</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Contact Information</h3>
+            </div>
+            <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+              <a href="mailto:scouts@masdetroit.org" class="contact-item" data-testid="link-email">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <span>scouts@masdetroit.org</span>
+              </a>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <span>MAS Tarbiyah Center, Livonia, MI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Send Us a Message</h3>
+          </div>
+          <div class="card-content">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <input type="text" name="name" placeholder="Your Name" class="form-input" required data-testid="input-name">
+              </div>
+              <div class="form-group">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <input type="email" name="email" placeholder="Your Email" class="form-input" required data-testid="input-email">
+              </div>
+              <div class="form-group">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <input type="tel" name="phone" placeholder="Your Phone (optional)" class="form-input" data-testid="input-phone">
+              </div>
+              <textarea name="message" placeholder="Your Message" class="form-textarea" rows="4" required data-testid="input-message"></textarea>
+              <button type="submit" class="btn btn-primary" style="width: 100%;" data-testid="button-send-message">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="https://www.masdetroit.org/" class="footer-logo">
+            <img src="https://www.masdetroit.org/wp-content/uploads/2022/02/MAS-DETROIT-10.png.webp" alt="MAS Detroit">
+          </a>
+          <p class="footer-description">Muslim American Society of Detroit - Building community through faith, service, and empowerment.</p>
+          <div class="footer-social">
+            <a href="https://twitter.com/masdetroit" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #000" data-testid="footer-social-x">X</a>
+            <a href="https://facebook.com/masdetroit" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #1877f2" data-testid="footer-social-facebook">f</a>
+            <a href="https://instagram.com/masdetroit" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #e4405f" data-testid="footer-social-instagram">ig</a>
+            <a href="https://youtube.com/masdetroit" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #ff0000" data-testid="footer-social-youtube">yt</a>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background-color: #25d366" data-testid="footer-social-whatsapp">wa</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.masdetroit.org/" target="_blank" rel="noopener noreferrer" data-testid="footer-link-home">Home</a></li>
+            <li><a href="https://www.masdetroit.org/center/" target="_blank" rel="noopener noreferrer" data-testid="footer-link-mtc">MTC</a></li>
+            <li><a href="https://www.masdetroit.org/programs/" target="_blank" rel="noopener noreferrer" data-testid="footer-link-programs">Programs</a></li>
+            <li><a href="https://www.masdetroit.org/events/" target="_blank" rel="noopener noreferrer" data-testid="footer-link-events">Events</a></li>
+            <li><a href="https://www.masdetroit.org/gallery/" target="_blank" rel="noopener noreferrer" data-testid="footer-link-gallery">Gallery</a></li>
+            <li><a href="https://www.masdetroit.org/donate/" target="_blank" rel="noopener noreferrer" data-testid="footer-link-donate">Donate</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Programs</h3>
+          <ul class="footer-links">
+            <li><a href="#">Cub Scouts Pack #2023</a></li>
+            <li><a href="https://masdetroit.org/family-odyssey/" target="_blank" rel="noopener noreferrer">Family Odyssey</a></li>
+            <li><a href="https://masdetroit.org/tarbiya" target="_blank" rel="noopener noreferrer">Tarbiya</a></li>
+            <li><a href="https://masdetroit.org/youth" target="_blank" rel="noopener noreferrer">Youth</a></li>
+            <li><a href="https://kymn.org/" target="_blank" rel="noopener noreferrer">KYMN</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul class="footer-links footer-contact">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@masdetroit.org">info@masdetroit.org</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+17346277575">(734) 627-7575</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>MAS Tarbiyah Center<br>Livonia, MI</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Muslim American Society of Detroit. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="https://www.masdetroit.org/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          <a href="https://www.masdetroit.org/terms/" target="_blank" rel="noopener noreferrer">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast">
+    <h4>Message Sent!</h4>
+    <p>Thank you for your inquiry. We'll get back to you soon.</p>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
