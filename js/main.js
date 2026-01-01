@@ -23,6 +23,31 @@ document.addEventListener('DOMContentLoaded', function() {
       src: 'assets/scout-photo-3.jpg',
       alt: 'Pack 2023 outdoor activities',
       caption: 'Building Character'
+    },
+    {
+      src: 'assets/38f4c35e-e087-48ee-b6d3-4573c2238ba0(1).jpg',
+      alt: 'Cub Scouts group photo',
+      caption: 'Pack 2023 Highlights'
+    },
+    {
+      src: 'assets/IMG_0012.JPG',
+      alt: 'Cub Scouts activity photo',
+      caption: 'Outdoor Fun'
+    },
+    {
+      src: 'assets/IMG_0013.JPG',
+      alt: 'Cub Scouts activity photo',
+      caption: 'Teamwork in Action'
+    },
+    {
+      src: 'assets/IMG_0018(1).JPG',
+      alt: 'Cub Scouts activity photo',
+      caption: 'Trail Moments'
+    },
+    {
+      src: 'assets/IMG_0020(1).JPG',
+      alt: 'Cub Scouts activity photo',
+      caption: 'Scout Spirit'
     }
   ];
 
