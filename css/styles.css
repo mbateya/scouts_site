@@ -3,7 +3,7 @@
 /* ============================================
    CSS Variables (Theme)
    ============================================ */
-:root {
+.scouts-page {
   --primary: #13AFF0;
   --primary-foreground: #ffffff;
   --secondary: #0ea5e9;
@@ -17,7 +17,6 @@
   --border: #e2e8f0;
   --card: #ffffff;
   --card-foreground: #1e293b;
-  --footer-bg: #1a1a2e;
   --font-body: 'Poppins', system-ui, -apple-system, sans-serif;
   --font-heading: 'Roboto Slab', Georgia, serif;
 }
@@ -25,17 +24,21 @@
 /* ============================================
    Reset & Base Styles
    ============================================ */
-*, *::before, *::after {
+body.scouts-standalone-preview {
+  margin: 0;
+}
+
+.scouts-page, .scouts-page *, .scouts-page *::before, .scouts-page *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html {
+.scouts-page {
   scroll-behavior: smooth;
 }
 
-body {
+.scouts-page {
   font-family: var(--font-body);
   background-color: var(--background);
   color: var(--foreground);
@@ -43,18 +46,18 @@ body {
   min-height: 100vh;
 }
 
-img {
+.scouts-page img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-a {
+.scouts-page a {
   color: inherit;
   text-decoration: none;
 }
 
-button {
+.scouts-page button {
   font-family: inherit;
   cursor: pointer;
   border: none;
@@ -64,108 +67,108 @@ button {
 /* ============================================
    Typography
    ============================================ */
-h1, h2, h3, h4, h5, h6 {
+.scouts-page h1, .scouts-page h2, .scouts-page h3, .scouts-page h4, .scouts-page h5, .scouts-page h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
-h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
+.scouts-page h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+.scouts-page h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+.scouts-page h3 { font-size: 1.5rem; }
+.scouts-page h4 { font-size: 1.25rem; }
 
-.text-muted {
+.scouts-page .text-muted {
   color: var(--muted-foreground);
 }
 
 /* ============================================
    Layout Utilities
    ============================================ */
-.container {
+.scouts-page .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
 @media (min-width: 640px) {
-  .container { padding: 0 1.5rem; }
+  .scouts-page .container { padding: 0 1.5rem; }
 }
 
 @media (min-width: 1024px) {
-  .container { padding: 0 2rem; }
+  .scouts-page .container { padding: 0 2rem; }
 }
 
-.section {
+.scouts-page .section {
   padding: 4rem 0;
 }
 
 @media (min-width: 768px) {
-  .section { padding: 6rem 0; }
+  .scouts-page .section { padding: 6rem 0; }
 }
 
-.section-alt {
+.scouts-page .section-alt {
   background-color: rgba(226, 232, 240, 0.5);
 }
 
-.text-center {
+.scouts-page .text-center {
   text-align: center;
 }
 
-.flex {
+.scouts-page .flex {
   display: flex;
 }
 
-.flex-col {
+.scouts-page .flex-col {
   flex-direction: column;
 }
 
-.items-center {
+.scouts-page .items-center {
   align-items: center;
 }
 
-.justify-center {
+.scouts-page .justify-center {
   justify-content: center;
 }
 
-.justify-between {
+.scouts-page .justify-between {
   justify-content: space-between;
 }
 
-.gap-2 { gap: 0.5rem; }
-.gap-3 { gap: 0.75rem; }
-.gap-4 { gap: 1rem; }
-.gap-6 { gap: 1.5rem; }
-.gap-8 { gap: 2rem; }
+.scouts-page .gap-2 { gap: 0.5rem; }
+.scouts-page .gap-3 { gap: 0.75rem; }
+.scouts-page .gap-4 { gap: 1rem; }
+.scouts-page .gap-6 { gap: 1.5rem; }
+.scouts-page .gap-8 { gap: 2rem; }
 
-.grid {
+.scouts-page .grid {
   display: grid;
 }
 
-.hidden { display: none; }
+.scouts-page .hidden { display: none; }
 
 @media (min-width: 640px) {
-  .sm-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .scouts-page .sm-grid-2 { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (min-width: 768px) {
-  .md-grid-2 { grid-template-columns: repeat(2, 1fr); }
-  .md-grid-3 { grid-template-columns: repeat(3, 1fr); }
-  .md-grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .scouts-page .md-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .scouts-page .md-grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .scouts-page .md-grid-4 { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (min-width: 1024px) {
-  .lg-grid-2 { grid-template-columns: repeat(2, 1fr); }
-  .lg-grid-4 { grid-template-columns: repeat(4, 1fr); }
-  .lg-grid-6 { grid-template-columns: repeat(6, 1fr); }
-  .lg-show { display: flex; }
-  .lg-hide { display: none; }
+  .scouts-page .lg-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .scouts-page .lg-grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .scouts-page .lg-grid-6 { grid-template-columns: repeat(6, 1fr); }
+  .scouts-page .lg-show { display: flex; }
+  .scouts-page .lg-hide { display: none; }
 }
 
 /* ============================================
    Buttons
    ============================================ */
-.btn {
+.scouts-page .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -177,50 +180,50 @@ h4 { font-size: 1.25rem; }
   transition: all 0.2s ease;
 }
 
-.btn-primary {
+.scouts-page .btn-primary {
   background-color: var(--primary);
   color: var(--primary-foreground);
 }
 
-.btn-primary:hover {
+.scouts-page .btn-primary:hover {
   background-color: #0d9cd8;
 }
 
-.btn-accent {
+.scouts-page .btn-accent {
   background-color: var(--accent);
   color: var(--accent-foreground);
 }
 
-.btn-accent:hover {
+.scouts-page .btn-accent:hover {
   background-color: #f59e0b;
 }
 
-.btn-outline {
+.scouts-page .btn-outline {
   background-color: transparent;
   border: 1px solid var(--border);
   color: var(--foreground);
 }
 
-.btn-outline:hover {
+.scouts-page .btn-outline:hover {
   background-color: var(--muted);
 }
 
-.btn-ghost {
+.scouts-page .btn-ghost {
   background-color: transparent;
   color: var(--foreground);
 }
 
-.btn-ghost:hover {
+.scouts-page .btn-ghost:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.btn-lg {
+.scouts-page .btn-lg {
   padding: 1rem 2rem;
   font-size: 1.125rem;
   border-radius: 9999px;
 }
 
-.btn-icon {
+.scouts-page .btn-icon {
   width: 2.25rem;
   height: 2.25rem;
   padding: 0;
@@ -230,7 +233,7 @@ h4 { font-size: 1.25rem; }
 /* ============================================
    Cards
    ============================================ */
-.card {
+.scouts-page .card {
   background-color: var(--card);
   border: 1px solid var(--border);
   border-radius: 0.5rem;
@@ -238,23 +241,23 @@ h4 { font-size: 1.25rem; }
   transition: box-shadow 0.2s ease;
 }
 
-.card:hover {
+.scouts-page .card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.card-header {
+.scouts-page .card-header {
   padding: 1.25rem;
   border-bottom: 1px solid var(--border);
 }
 
-.card-content {
+.scouts-page .card-content {
   padding: 1.25rem;
 }
 
 /* ============================================
    Badge
    ============================================ */
-.badge {
+.scouts-page .badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -268,110 +271,16 @@ h4 { font-size: 1.25rem; }
   backdrop-filter: blur(4px);
 }
 
-.badge-secondary {
+.scouts-page .badge-secondary {
   background-color: var(--muted);
   color: var(--foreground);
   border: none;
 }
 
 /* ============================================
-   Navigation
-   ============================================ */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background-color: var(--background);
-  border-bottom: 1px solid var(--border);
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  gap: 1rem;
-}
-
-.nav-logo img {
-  height: 3.5rem;
-  width: auto;
-}
-
-@media (min-width: 768px) {
-  .nav-logo img { height: 4rem; }
-}
-
-.nav-social {
-  display: none;
-  gap: 0.5rem;
-}
-
-@media (min-width: 1024px) {
-  .nav-social { display: flex; }
-}
-
-.social-icon {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 9999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 0.875rem;
-  transition: opacity 0.2s;
-}
-
-.social-icon:hover {
-  opacity: 0.8;
-}
-
-.nav-links {
-  display: none;
-  justify-content: center;
-  gap: 0.25rem;
-  padding: 0.75rem 0;
-  border-top: 1px solid var(--border);
-}
-
-@media (min-width: 1024px) {
-  .nav-links { display: flex; }
-}
-
-.nav-link {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--foreground);
-  transition: color 0.2s;
-}
-
-.nav-link:hover {
-  color: var(--secondary);
-}
-
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem 0;
-  border-top: 1px solid var(--border);
-}
-
-.mobile-menu.open {
-  display: flex;
-}
-
-@media (min-width: 1024px) {
-  .mobile-menu { display: none !important; }
-  .mobile-menu-btn { display: none; }
-}
-
-/* ============================================
    Hero Section
    ============================================ */
-.hero {
+.scouts-page .hero {
   position: relative;
   padding: 3rem 0;
   display: flex;
@@ -381,10 +290,10 @@ h4 { font-size: 1.25rem; }
 }
 
 @media (min-width: 768px) {
-  .hero { padding: 4rem 0; }
+  .scouts-page .hero { padding: 4rem 0; }
 }
 
-.hero-bg {
+.scouts-page .hero-bg {
   position: absolute;
   inset: 0;
   background-image: url('https://www.scouting.org/wp-content/uploads/2023/03/Cub-Scout-landing-page-2023-1.webp');
@@ -392,13 +301,13 @@ h4 { font-size: 1.25rem; }
   background-position: center;
 }
 
-.hero-overlay {
+.scouts-page .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right, rgba(19, 175, 240, 0.95), rgba(19, 175, 240, 0.8), rgba(19, 175, 240, 0.6));
 }
 
-.hero-content {
+.scouts-page .hero-content {
   position: relative;
   z-index: 10;
   text-align: center;
@@ -407,16 +316,16 @@ h4 { font-size: 1.25rem; }
   margin: 0 auto;
 }
 
-.hero h1 {
+.scouts-page .hero h1 {
   color: white;
   margin-bottom: 1rem;
 }
 
-.hero h1 span {
+.scouts-page .hero h1 span {
   color: var(--accent);
 }
 
-.hero-description {
+.scouts-page .hero-description {
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.9);
   max-width: 48rem;
@@ -424,10 +333,10 @@ h4 { font-size: 1.25rem; }
 }
 
 @media (min-width: 768px) {
-  .hero-description { font-size: 1.25rem; }
+  .scouts-page .hero-description { font-size: 1.25rem; }
 }
 
-.hero-buttons {
+.scouts-page .hero-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -435,29 +344,29 @@ h4 { font-size: 1.25rem; }
 }
 
 @media (min-width: 640px) {
-  .hero-buttons { flex-direction: row; justify-content: center; }
+  .scouts-page .hero-buttons { flex-direction: row; justify-content: center; }
 }
 
-.btn-hero-outline {
+.scouts-page .btn-hero-outline {
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(4px);
 }
 
-.btn-hero-outline:hover {
+.scouts-page .btn-hero-outline:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* ============================================
    Photo Gallery
    ============================================ */
-.gallery-container {
+.scouts-page .gallery-container {
   max-width: 56rem;
   margin: 0 auto;
 }
 
-.gallery-main {
+.scouts-page .gallery-main {
   position: relative;
   aspect-ratio: 16 / 10;
   background-color: var(--muted);
@@ -465,14 +374,14 @@ h4 { font-size: 1.25rem; }
   overflow: hidden;
 }
 
-.gallery-main img {
+.scouts-page .gallery-main img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: opacity 0.5s ease;
 }
 
-.gallery-caption {
+.scouts-page .gallery-caption {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -481,18 +390,18 @@ h4 { font-size: 1.25rem; }
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
 }
 
-.gallery-caption p {
+.scouts-page .gallery-caption p {
   color: white;
   font-weight: 500;
   font-size: 1.125rem;
 }
 
-.gallery-caption span {
+.scouts-page .gallery-caption span {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.875rem;
 }
 
-.gallery-nav {
+.scouts-page .gallery-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -508,14 +417,14 @@ h4 { font-size: 1.25rem; }
   font-size: 1.25rem;
 }
 
-.gallery-nav:hover {
+.scouts-page .gallery-nav:hover {
   background-color: white;
 }
 
-.gallery-nav.prev { left: 1rem; }
-.gallery-nav.next { right: 1rem; }
+.scouts-page .gallery-nav.prev { left: 1rem; }
+.scouts-page .gallery-nav.next { right: 1rem; }
 
-.gallery-thumbnails {
+.scouts-page .gallery-thumbnails {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
@@ -524,7 +433,7 @@ h4 { font-size: 1.25rem; }
   overflow-x: auto;
 }
 
-.gallery-thumb {
+.scouts-page .gallery-thumb {
   flex-shrink: 0;
   width: 5rem;
   height: 3.5rem;
@@ -536,17 +445,17 @@ h4 { font-size: 1.25rem; }
   cursor: pointer;
 }
 
-.gallery-thumb:hover {
+.scouts-page .gallery-thumb:hover {
   opacity: 1;
 }
 
-.gallery-thumb.active {
+.scouts-page .gallery-thumb.active {
   border-color: var(--secondary);
   opacity: 1;
   box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.3);
 }
 
-.gallery-thumb img {
+.scouts-page .gallery-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -555,12 +464,12 @@ h4 { font-size: 1.25rem; }
 /* ============================================
    Video Section
    ============================================ */
-.video-container {
+.scouts-page .video-container {
   max-width: 56rem;
   margin: 0 auto;
 }
 
-.video-wrapper {
+.scouts-page .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -569,7 +478,7 @@ h4 { font-size: 1.25rem; }
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-.video-wrapper iframe {
+.scouts-page .video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -581,25 +490,25 @@ h4 { font-size: 1.25rem; }
 /* ============================================
    Scout Law Section
    ============================================ */
-.scout-law-grid {
+.scouts-page .scout-law-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
 @media (min-width: 640px) {
-  .scout-law-grid { grid-template-columns: repeat(3, 1fr); }
+  .scouts-page .scout-law-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (min-width: 768px) {
-  .scout-law-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+  .scouts-page .scout-law-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
 }
 
 @media (min-width: 1024px) {
-  .scout-law-grid { grid-template-columns: repeat(6, 1fr); }
+  .scouts-page .scout-law-grid { grid-template-columns: repeat(6, 1fr); }
 }
 
-.scout-law-card {
+.scouts-page .scout-law-card {
   cursor: pointer;
   text-align: center;
   padding: 1rem;
@@ -609,12 +518,12 @@ h4 { font-size: 1.25rem; }
   transition: all 0.3s ease;
 }
 
-.scout-law-card:hover {
+.scouts-page .scout-law-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
-.scout-law-image {
+.scouts-page .scout-law-image {
   width: 100%;
   aspect-ratio: 1;
   margin-bottom: 0.75rem;
@@ -623,7 +532,7 @@ h4 { font-size: 1.25rem; }
   background-color: #E8D5B5;
 }
 
-.scout-law-image img {
+.scouts-page .scout-law-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -631,23 +540,23 @@ h4 { font-size: 1.25rem; }
   transition: transform 0.3s ease;
 }
 
-.scout-law-card:hover .scout-law-image img {
+.scouts-page .scout-law-card:hover .scout-law-image img {
   transform: scale(1.05);
 }
 
-.scout-law-name {
+.scouts-page .scout-law-name {
   font-weight: 600;
   font-size: 0.875rem;
 }
 
 @media (min-width: 768px) {
-  .scout-law-name { font-size: 1rem; }
+  .scouts-page .scout-law-name { font-size: 1rem; }
 }
 
 /* ============================================
    How to Join Section
    ============================================ */
-.join-steps {
+.scouts-page .join-steps {
   max-width: 40rem;
   margin: 0 auto;
   display: flex;
@@ -655,14 +564,14 @@ h4 { font-size: 1.25rem; }
   gap: 1rem;
 }
 
-.join-step {
+.scouts-page .join-step {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
   padding: 1rem 1.5rem;
 }
 
-.step-number {
+.scouts-page .step-number {
   flex-shrink: 0;
   width: 2.5rem;
   height: 2.5rem;
@@ -675,18 +584,18 @@ h4 { font-size: 1.25rem; }
   font-weight: 700;
 }
 
-.step-content h4 {
+.scouts-page .step-content h4 {
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
-.step-content p {
+.scouts-page .step-content p {
   font-size: 0.875rem;
   color: var(--muted-foreground);
   margin-bottom: 0.5rem;
 }
 
-.step-link {
+.scouts-page .step-link {
   color: var(--secondary);
   font-size: 0.875rem;
   display: inline-flex;
@@ -694,24 +603,24 @@ h4 { font-size: 1.25rem; }
   gap: 0.25rem;
 }
 
-.step-link:hover {
+.scouts-page .step-link:hover {
   text-decoration: underline;
 }
 
-.fees-card {
+.scouts-page .fees-card {
   max-width: 40rem;
   margin: 2rem auto;
   background-color: rgba(226, 232, 240, 0.3);
 }
 
-.fees-card-content {
+.scouts-page .fees-card-content {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.5rem;
 }
 
-.fees-icon {
+.scouts-page .fees-icon {
   flex-shrink: 0;
   padding: 0.75rem;
   border-radius: 0.5rem;
@@ -723,36 +632,36 @@ h4 { font-size: 1.25rem; }
 /* ============================================
    Resources Section
    ============================================ */
-.resources-grid {
+.scouts-page .resources-grid {
   display: grid;
   gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
-  .resources-grid { grid-template-columns: repeat(2, 1fr); }
+  .scouts-page .resources-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-.resource-category-header {
+.scouts-page .resource-category-header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 1rem;
 }
 
-.resource-icon {
+.scouts-page .resource-icon {
   padding: 0.75rem;
   border-radius: 0.5rem;
   background-color: rgba(14, 165, 233, 0.1);
   color: var(--secondary);
 }
 
-.resource-list {
+.scouts-page .resource-list {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.resource-item {
+.scouts-page .resource-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -763,11 +672,11 @@ h4 { font-size: 1.25rem; }
   transition: background-color 0.2s;
 }
 
-.resource-item:hover {
+.scouts-page .resource-item:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.additional-resources {
+.scouts-page .additional-resources {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -778,7 +687,7 @@ h4 { font-size: 1.25rem; }
 /* ============================================
    Calendar Section
    ============================================ */
-.calendar-placeholder {
+.scouts-page .calendar-placeholder {
   aspect-ratio: 16 / 9;
   background-color: var(--muted);
   border-radius: 0.5rem;
@@ -791,7 +700,7 @@ h4 { font-size: 1.25rem; }
   margin-bottom: 1rem;
 }
 
-.calendar-placeholder svg {
+.scouts-page .calendar-placeholder svg {
   width: 4rem;
   height: 4rem;
   margin-bottom: 1rem;
@@ -802,63 +711,63 @@ h4 { font-size: 1.25rem; }
 /* ============================================
    Charter Section
    ============================================ */
-.charter-card {
+.scouts-page .charter-card {
   max-width: 48rem;
   margin: 0 auto;
   border: 2px solid rgba(19, 175, 240, 0.2);
 }
 
-.charter-header {
+.scouts-page .charter-header {
   background-color: rgba(19, 175, 240, 0.05);
   padding: 2rem;
   text-align: center;
   border-bottom: 1px solid rgba(19, 175, 240, 0.2);
 }
 
-.charter-icons {
+.scouts-page .charter-icons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
-.charter-icons svg {
+.scouts-page .charter-icons svg {
   width: 3rem;
   height: 3rem;
 }
 
-.charter-details {
+.scouts-page .charter-details {
   padding: 2rem;
 }
 
-.charter-grid {
+.scouts-page .charter-grid {
   display: grid;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 640px) {
-  .charter-grid { grid-template-columns: repeat(2, 1fr); }
+  .scouts-page .charter-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-.charter-item {
+.scouts-page .charter-item {
   background-color: rgba(226, 232, 240, 0.5);
   border-radius: 0.5rem;
   padding: 1rem;
 }
 
-.charter-item span {
+.scouts-page .charter-item span {
   display: block;
   font-size: 0.875rem;
   color: var(--muted-foreground);
   margin-bottom: 0.25rem;
 }
 
-.charter-item strong {
+.scouts-page .charter-item strong {
   font-weight: 600;
 }
 
-.charter-badges {
+.scouts-page .charter-badges {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -869,22 +778,22 @@ h4 { font-size: 1.25rem; }
 /* ============================================
    Contact Section
    ============================================ */
-.contact-grid {
+.scouts-page .contact-grid {
   display: grid;
   gap: 2rem;
 }
 
 @media (min-width: 1024px) {
-  .contact-grid { grid-template-columns: repeat(2, 1fr); }
+  .scouts-page .contact-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-.leader-item {
+.scouts-page .leader-item {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.leader-avatar {
+.scouts-page .leader-avatar {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -896,7 +805,7 @@ h4 { font-size: 1.25rem; }
   font-weight: 600;
 }
 
-.contact-item {
+.scouts-page .contact-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -904,28 +813,28 @@ h4 { font-size: 1.25rem; }
   transition: color 0.2s;
 }
 
-.contact-item:hover {
+.scouts-page .contact-item:hover {
   color: var(--secondary);
 }
 
-.contact-icon {
+.scouts-page .contact-icon {
   padding: 0.5rem;
   border-radius: 0.5rem;
   background-color: rgba(14, 165, 233, 0.1);
   color: var(--secondary);
 }
 
-.contact-form {
+.scouts-page .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.form-group {
+.scouts-page .form-group {
   position: relative;
 }
 
-.form-group svg {
+.scouts-page .form-group svg {
   position: absolute;
   left: 0.75rem;
   top: 50%;
@@ -935,7 +844,7 @@ h4 { font-size: 1.25rem; }
   color: var(--muted-foreground);
 }
 
-.form-input {
+.scouts-page .form-input {
   width: 100%;
   padding: 0.625rem 0.75rem 0.625rem 2.5rem;
   border: 1px solid var(--border);
@@ -944,13 +853,13 @@ h4 { font-size: 1.25rem; }
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.form-input:focus {
+.scouts-page .form-input:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(19, 175, 240, 0.1);
 }
 
-.form-textarea {
+.scouts-page .form-textarea {
   width: 100%;
   padding: 0.625rem 0.75rem;
   border: 1px solid var(--border);
@@ -962,136 +871,16 @@ h4 { font-size: 1.25rem; }
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.form-textarea:focus {
+.scouts-page .form-textarea:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(19, 175, 240, 0.1);
 }
 
 /* ============================================
-   Footer
-   ============================================ */
-.footer {
-  background-color: var(--footer-bg);
-  color: white;
-  padding: 3rem 0;
-}
-
-.footer-grid {
-  display: grid;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 640px) {
-  .footer-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (min-width: 1024px) {
-  .footer-grid { grid-template-columns: repeat(4, 1fr); }
-}
-
-.footer-logo img {
-  height: 4rem;
-  width: auto;
-  filter: brightness(0) invert(1);
-  margin-bottom: 1.5rem;
-}
-
-.footer-description {
-  color: #9ca3af;
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
-}
-
-.footer-social {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.footer h3 {
-  font-size: 1.125rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.footer-links a {
-  color: #9ca3af;
-  font-size: 0.875rem;
-  transition: color 0.2s;
-}
-
-.footer-links a:hover {
-  color: white;
-}
-
-.footer-contact li {
-  color: #9ca3af;
-  font-size: 0.875rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.footer-contact a:hover {
-  color: white;
-}
-
-.footer-contact svg {
-  flex-shrink: 0;
-  color: var(--primary);
-  margin-top: 0.125rem;
-}
-
-.footer-bottom {
-  border-top: 1px solid #374151;
-  padding-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-}
-
-@media (min-width: 640px) {
-  .footer-bottom {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-.footer-bottom p {
-  color: #6b7280;
-  font-size: 0.875rem;
-}
-
-.footer-legal {
-  display: flex;
-  gap: 1rem;
-}
-
-.footer-legal a {
-  color: #6b7280;
-  font-size: 0.875rem;
-  transition: color 0.2s;
-}
-
-.footer-legal a:hover {
-  color: white;
-}
-
-/* ============================================
    Toast Notification
    ============================================ */
-.toast {
+.scouts-page .toast {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -1106,17 +895,17 @@ h4 { font-size: 1.25rem; }
   transition: all 0.3s ease;
 }
 
-.toast.show {
+.scouts-page .toast.show {
   transform: translateY(0);
   opacity: 1;
 }
 
-.toast h4 {
+.scouts-page .toast h4 {
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
-.toast p {
+.scouts-page .toast p {
   font-size: 0.875rem;
   color: var(--muted-foreground);
 }
@@ -1124,16 +913,16 @@ h4 { font-size: 1.25rem; }
 /* ============================================
    Section Headers
    ============================================ */
-.section-header {
+.scouts-page .section-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.section-header h2 {
+.scouts-page .section-header h2 {
   margin-bottom: 1rem;
 }
 
-.section-header p {
+.scouts-page .section-header p {
   font-size: 1.125rem;
   color: var(--muted-foreground);
   max-width: 48rem;
@@ -1143,9 +932,9 @@ h4 { font-size: 1.25rem; }
 /* ============================================
    Utilities
    ============================================ */
-.mb-2 { margin-bottom: 0.5rem; }
-.mb-4 { margin-bottom: 1rem; }
-.mb-6 { margin-bottom: 1.5rem; }
-.mb-8 { margin-bottom: 2rem; }
-.mt-4 { margin-top: 1rem; }
-.mt-8 { margin-top: 2rem; }
+.scouts-page .mb-2 { margin-bottom: 0.5rem; }
+.scouts-page .mb-4 { margin-bottom: 1rem; }
+.scouts-page .mb-6 { margin-bottom: 1.5rem; }
+.scouts-page .mb-8 { margin-bottom: 2rem; }
+.scouts-page .mt-4 { margin-top: 1rem; }
+.scouts-page .mt-8 { margin-top: 2rem; }

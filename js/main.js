@@ -1,10 +1,15 @@
 /**
  * MAS Detroit Cub Scout Pack #2023 - Main JavaScript
- * This file handles interactive features like the photo gallery,
- * mobile menu toggle, and contact form.
+ * This file handles scouts subpage interactions.
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+  const page = document.getElementById('scouts-page');
+
+  if (!page) {
+    return;
+  }
+
   // ============================================
   // PHOTO GALLERY
   // ============================================
@@ -52,14 +57,18 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
 
   let currentIndex = 0;
-  const galleryImage = document.getElementById('gallery-image');
-  const galleryCaptionText = document.getElementById('gallery-caption-text');
-  const galleryCounter = document.getElementById('gallery-counter');
-  const galleryPrev = document.getElementById('gallery-prev');
-  const galleryNext = document.getElementById('gallery-next');
-  const thumbnails = document.querySelectorAll('.gallery-thumb');
+  const galleryImage = page.querySelector('#gallery-image');
+  const galleryCaptionText = page.querySelector('#gallery-caption-text');
+  const galleryCounter = page.querySelector('#gallery-counter');
+  const galleryPrev = page.querySelector('#gallery-prev');
+  const galleryNext = page.querySelector('#gallery-next');
+  const thumbnails = page.querySelectorAll('.gallery-thumb');
 
   function updateGallery() {
+    if (!galleryImage || !galleryCaptionText || !galleryCounter) {
+      return;
+    }
+
     const image = galleryImages[currentIndex];
     galleryImage.src = image.src;
     galleryImage.alt = image.alt;
@@ -95,24 +104,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ============================================
-  // MOBILE MENU
-  // ============================================
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuIcon = document.getElementById('menu-icon');
-
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', function() {
-      const isOpen = mobileMenu.classList.toggle('open');
-      menuIcon.innerHTML = isOpen ? '&#10005;' : '&#9776;';
-    });
-  }
-
-  // ============================================
   // CONTACT FORM
   // ============================================
-  const contactForm = document.getElementById('contact-form');
-  const toast = document.getElementById('toast');
+  const contactForm = page.querySelector('#contact-form');
+  const toast = page.querySelector('#toast');
 
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -156,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // ============================================
   // SMOOTH SCROLLING FOR ANCHOR LINKS
   // ============================================
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  page.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
       if (href !== '#') {
