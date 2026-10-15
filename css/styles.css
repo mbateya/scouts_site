@@ -1,4 +1,4 @@
-/* MAS Detroit Cub Scout Pack #2023 - Main Stylesheet */
+/* MAS Detroit Scouts — Pack #2023 & Troop #2023 - Main Stylesheet */
 
 /* ============================================
    CSS Variables (Theme)
@@ -938,3 +938,44 @@ body.scouts-standalone-preview {
 .scouts-page .mb-8 { margin-bottom: 2rem; }
 .scouts-page .mt-4 { margin-top: 1rem; }
 .scouts-page .mt-8 { margin-top: 2rem; }
+
+.scouts-page .hero-programs {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 3vw, 1.65rem);
+  margin-bottom: 1rem;
+}
+
+.scouts-page .registration-button { min-height: 5rem; text-align: left; border-radius: 1rem; }
+.scouts-page .registration-button small { display: block; font-size: 0.8rem; margin-top: 0.3rem; font-weight: 400; }
+.scouts-page .btn-troop { background: #123f6b; color: #fff; }
+.scouts-page .btn-troop:hover { background: #0b2d50; }
+.scouts-page .resource-item { gap: 1rem; }
+.scouts-page .resource-item strong { display: block; font-weight: 500; }
+.scouts-page .resource-item small { display: block; color: var(--muted-foreground); margin-top: 0.25rem; }
+.scouts-page .resource-item svg { flex-shrink: 0; }
+.scouts-page .scout-calendar { width: 100%; max-width: 100%; display: block; }
+.scouts-page .charters-grid { display: grid; gap: 1.5rem; }
+.scouts-page .charter-card { width: 100%; min-width: 0; }
+.scouts-page .form-field label,
+.scouts-page .contact-form > label { display: block; font-weight: 500; font-size: 0.875rem; }
+.scouts-page .form-field label { margin-bottom: 0.4rem; }
+.scouts-page :is(a, button, input, textarea):focus-visible { outline: 3px solid #123f6b; outline-offset: 4px; }
+.scouts-page .hero a:focus-visible { outline-color: #fff; }
+.scouts-page .contact-form button:disabled { opacity: 0.65; cursor: wait; }
+
+@media (max-width: 639px) {
+  .scouts-page .hero-buttons { align-items: stretch; }
+  .scouts-page .registration-button { justify-content: space-between; font-size: 1rem; padding: 1rem 1.25rem; }
+  .scouts-page .gallery-thumbnails { justify-content: flex-start; }
+  .scouts-page .toast { left: 1rem; right: 1rem; }
+}
+
+@media (min-width: 1024px) {
+  .scouts-page .charters-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scouts-page { scroll-behavior: auto; }
+  .scouts-page *, .scouts-page *::before, .scouts-page *::after { transition: none !important; }
+}

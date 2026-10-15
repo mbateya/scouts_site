@@ -1,5 +1,5 @@
 /**
- * MAS Detroit Cub Scout Pack #2023 - Main JavaScript
+ * MAS Detroit Scouts — Pack #2023 & Troop #2023 - Main JavaScript
  * This file handles scouts subpage interactions.
  */
 
@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     galleryCounter.textContent = `${currentIndex + 1} of ${galleryImages.length}`;
 
     thumbnails.forEach((thumb, index) => {
+      thumb.setAttribute('aria-pressed', String(index === currentIndex));
       if (index === currentIndex) {
         thumb.classList.add('active');
       } else {
@@ -103,6 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  updateGallery();
+
   // ============================================
   // CONTACT FORM
   // ============================================
@@ -110,32 +113,48 @@ document.addEventListener('DOMContentLoaded', function() {
   const toast = page.querySelector('#toast');
 
   if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const formData = new FormData(contactForm);
-      const name = formData.get('name');
-      const email = formData.get('email');
-      const phone = formData.get('phone');
-      const message = formData.get('message');
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const status = page.querySelector('#contact-status');
+    let submitting = false;
 
-      // Create mailto link with form data
-      const subject = encodeURIComponent('Pack #2023 Inquiry from ' + name);
-      const body = encodeURIComponent(
-        'Name: ' + name + '\n' +
-        'Email: ' + email + '\n' +
-        (phone ? 'Phone: ' + phone + '\n' : '') +
-        '\nMessage:\n' + message
-      );
-      
-      // Open email client
-      window.location.href = 'mailto:scouts@masdetroit.org?subject=' + subject + '&body=' + body;
-      
-      // Show toast notification
-      showToast();
-      
-      // Reset form
-      contactForm.reset();
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      if (submitting || !contactForm.reportValidity()) return;
+
+      submitting = true;
+      submitButton.disabled = true;
+      const originalButton = submitButton.innerHTML;
+      submitButton.textContent = 'Sending…';
+      contactForm.setAttribute('aria-busy', 'true');
+      status.textContent = 'Sending your message…';
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 20000);
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' },
+          signal: controller.signal
+        });
+
+        if (!response.ok) {
+          status.textContent = 'Your message could not be submitted. Please try again or email scouts@masdetroit.org. Your message is still here.';
+          return;
+        }
+
+        contactForm.reset();
+        status.textContent = "Your message has been submitted. Thank you for reaching out!";
+        showToast();
+      } catch (error) {
+        status.textContent = 'We could not confirm your submission. Your message is still here. Please check your connection or email scouts@masdetroit.org.';
+      } finally {
+        clearTimeout(timeout);
+        submitting = false;
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButton;
+        contactForm.removeAttribute('aria-busy');
+      }
     });
   }
 
@@ -159,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const target = document.querySelector(href);
         if (target) {
           target.scrollIntoView({
-            behavior: 'smooth',
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
             block: 'start'
           });
         }
