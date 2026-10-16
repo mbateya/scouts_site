@@ -971,6 +971,25 @@ html:has(.scouts-page) {
 .scouts-page .hero a:focus-visible { outline-color: #fff; }
 .scouts-page .contact-form button:disabled { opacity: 0.65; cursor: wait; }
 
+.scouts-footer {
+  padding: 1.5rem 1rem;
+  background: #0f172a;
+  color: #cbd5e1;
+  font: 0.8rem/1.6 var(--font-body);
+  text-align: center;
+}
+
+.scouts-footer p {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.scouts-footer a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 @media (max-width: 639px) {
   .scouts-page .hero-buttons { align-items: stretch; }
   .scouts-page .registration-button { justify-content: space-between; font-size: 1rem; padding: 1rem 1.25rem; }

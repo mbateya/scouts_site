@@ -10,6 +10,20 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
   }
 
+  page.querySelectorAll('[data-ga-event]').forEach(function(element) {
+    element.addEventListener('click', function() {
+      if (typeof window.gtag !== 'function') return;
+
+      const parameters = {};
+      ['program', 'location', 'resource'].forEach(function(key) {
+        const value = element.dataset['ga' + key.charAt(0).toUpperCase() + key.slice(1)];
+        if (value) parameters[key] = value;
+      });
+
+      window.gtag('event', element.dataset.gaEvent, parameters);
+    });
+  });
+
   // Tell the WordPress host how tall the page is so its iframe can grow with
   // the content instead of trapping scrolling inside a fixed-height frame.
   const wordpressOrigin = 'https://www.masdetroit.org';
@@ -174,6 +188,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         contactForm.reset();
         status.textContent = "Your message has been submitted. Thank you for reaching out!";
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'contact_form_submit', { form_name: 'scouts_contact' });
+        }
         showToast();
       } catch (error) {
         status.textContent = 'We could not confirm your submission. Your message is still here. Please check your connection or email scouts@masdetroit.org.';
