@@ -26,6 +26,27 @@ If the chapter website is managed through a CMS or theme template:
 4. Add `js/main.js` at the bottom of that page or enqueue it in the theme footer.
 5. Upload the `assets/` folder and keep the image paths matching the HTML and JavaScript.
 
+### WordPress iframe embed
+
+When embedding the hosted page in WordPress, do not use a fixed iframe height. The page reports its content height to the WordPress parent with `postMessage`; add this listener to the page containing the iframe (Elementor HTML widget or theme footer), and give the iframe the `scouts-embed` class:
+
+```html
+<iframe class="scouts-embed" src="https://mbateya.github.io/scouts_site/" title="MAS Detroit Scouts" style="width:100%;height:320px;border:0;display:block" scrolling="no"></iframe>
+<script>
+window.addEventListener('message', function (event) {
+  if (event.origin !== 'https://mbateya.github.io') return;
+  if (event.data?.type !== 'scouts-page:height') return;
+  if (!Number.isFinite(event.data.height)) return;
+  const frame = document.querySelector('.scouts-embed');
+  if (frame && event.source === frame.contentWindow) {
+    frame.style.height = `${Math.max(320, Math.ceil(event.data.height))}px`;
+  }
+});
+</script>
+```
+
+The height message is sent again when the content or viewport changes, so the outer WordPress page remains the only vertical scroll area.
+
 Do not copy a separate header, navigation, or footer from this scouts page. The chapter website should continue to own the permanent top menu and site footer.
 
 ## Notes

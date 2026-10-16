@@ -10,6 +10,35 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
   }
 
+  // Tell the WordPress host how tall the page is so its iframe can grow with
+  // the content instead of trapping scrolling inside a fixed-height frame.
+  const wordpressOrigin = 'https://www.masdetroit.org';
+  let lastReportedHeight = 0;
+  let resizeFrame = 0;
+
+  function reportPageHeight() {
+    cancelAnimationFrame(resizeFrame);
+    resizeFrame = requestAnimationFrame(function() {
+      const height = Math.ceil(Math.max(
+        document.documentElement.scrollHeight,
+        document.body.scrollHeight,
+        page.getBoundingClientRect().height
+      ));
+
+      if (height !== lastReportedHeight) {
+        lastReportedHeight = height;
+        window.parent.postMessage({ type: 'scouts-page:height', height }, wordpressOrigin);
+      }
+    });
+  }
+
+  reportPageHeight();
+  if ('ResizeObserver' in window) {
+    new ResizeObserver(reportPageHeight).observe(page);
+  }
+  window.addEventListener('load', reportPageHeight);
+  window.addEventListener('resize', reportPageHeight);
+
   // ============================================
   // PHOTO GALLERY
   // ============================================
@@ -175,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const href = this.getAttribute('href');
       if (href !== '#') {
         e.preventDefault();
-        const target = document.querySelector(href);
+        const target = page.querySelector(href);
         if (target) {
           target.scrollIntoView({
             behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
